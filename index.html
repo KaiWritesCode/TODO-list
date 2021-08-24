@@ -7,34 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
     <link rel="stylesheet" href="app.css">
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="app.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="container">
-            <h1>To-do List</h1>
+            <h1>Todo List</h1>
         </div>
     </header>
 
     <div class="section">
         <div class="container">
             <h2>Finish These ASAP</h2>
-            <form action="submit">
-                <input type="text" placeholder="Add Items...">
-                <select name="" id="">
-                    <option value="none">Tag</option>
+            <form id="top-form" action="submit">
+                <input id="add-items" type="text" placeholder="Add Items...">
+                <select name="" id="status">
+                    <option class="none" value="none">Status</option>
                     <option value="whenever">I have time</option>
-                    <option value="">Get this done</option>
-                    <option value="urgent">Very urgent</option>
+                    <option class="mid" value="mid">Get this done</option>
+                    <option class="urgent" value="urgent">Very urgent</option>
                 </select>
+                <button class="plus-btn" onclick="addStatus()">+</button>
             </form>
-            <form action="submit">
-                <ul>
-                    <li>Item 1 <input type="checkbox"></li>
-                    <li>Item 2 <input type="checkbox"></li>
-                    <li>Item 3<input type="checkbox"></li>
-                    <button>Done With This!</button>
+            <form id="form-box" action="submit">
+                <ul id="list-items">
+                    <li class="item">Add something todo!<span class="green"></span><button class="btn">✓</button>
+                    <li class="item">Add something todo!<span class="orange"></span><button class="btn">✓</button>
+                    <li class="item">Add something todo!<span class="red"></span><button class="btn">✓</button>
+                    </li>
                 </ul>
             </form>
         </div>
